@@ -132,6 +132,36 @@ document.body.innerHTML += "<p>Stav inzerátu: " + apartment.status + ".</p>"
 //V JavaScriptovém programu vytvořte objekt představující jednu knihu v knihovně. Uvažte, jaké vlastnosti může taková kniha mít. Rozhodně budeme chtít název, autora a počet stran. Přidejte do objektu alespoň tři další vlastnosti tak, aby obsahovaly čísla, řetězce i vnořený objekt.
 //Vytvořte alespoň jednu další knihu se stejnými vlastnostmi ale jinými hodnotami.`
 
+const book1 = {
+  title: "Velký průvodce JavaScriptem",
+  author: "Dave Thau",
+  pages: 516,
+  year: "2009",
+  publisher: "Cosmopolis",
+  availability: {
+    price: 166,
+    stock: "titul je vyprodaný",
+    ebook: true
+  },
+  rating: 10
+}
+
+const book2 = {
+  title: "Kouzlo jednorožců",
+  author: "Diana Cooper",
+  pages: 324,
+  year: 2022,
+  publisher: "Fontána",
+  availibility: {
+    price: 403,
+    stock: "dostupné na prodejně",
+    ebook: false
+  },
+  rating: 2
+}
+
+document.body.innerHTML += "<p>Hodnocení knihy " + book2.title + " autorky " + book2.author + ", vydané v roce " + book2.year + " nakladatelstvím " + book2.publisher + " je " + book2.rating + " z 10 bodů.</p>"
+
 /*
 Pokračujme v našem registračním systému na očkováni. Zatím se umíme uživatele zeptat na jméno a věk.
 Vytvořte objekt person, do kterého vložte uživatelem zadané údaje. Objekt bude mít následující strukturu
@@ -142,11 +172,12 @@ Vytvořte objekt person, do kterého vložte uživatelem zadané údaje. Objekt 
 Přidejte do objektu person údaj o tom, v jakém jazyce si uživatel přeje komunikovat. Zjistěte jej z objektu window.
 Poté, co uživatel zadá všechny údaje, vypište do stránky objekt person se všemi jeho vlastnostmi v nějakém hezkém formátu a zkontrolujte, že obsahuje správné informace.
 */
-const jmeno = prompt("Zadejte své jméno: ");
+/*
+const jmeno = prompt("Zadejte své jméno a příjmení: ");
 const vek = Number(prompt("Zadejte svůj věk: "));
 const jazyk = prompt("Jakým jazykem chcete komunikovat?")
 
-document.body.innerHTML += jmeno + ", věk: " + vek
+//document.body.innerHTML += jmeno + ", věk: " + vek
 
 const person = {
     name: jmeno,
@@ -154,8 +185,8 @@ const person = {
     language: jazyk
 }
 
-document.body.innerHTML += "<p>Jméno: " + person.name + ", věk: " + person.age + ", jazyk: " + person.language + ".</p>"
-
+document.body.innerHTML += "<p>Jméno: " + person.name + ", věk: " + person.age + ", jazyk: " + person.language + "</p>"
+*/
 
 
 
